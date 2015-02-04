@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#000"
+                android:onClick="click_photo"
+                android:padding="10dp"
+                android:src="@drawable/elderly_photo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="click_photo"
+                android:text="@string/insert_photo"
+                android:textColor="#fff"
+                android:textSize="20dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#000"
+                android:onClick="click_email"
+                android:padding="10dp"
+                android:src="@drawable/elderly_email" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="click_email"
+                android:text="@string/insert_email"
+                android:textColor="#fff"
+                android:textSize="20dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#000"
+                android:onClick="click_address"
+                android:padding="10dp"
+                android:src="@drawable/elderly_address" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="click_address"
+                android:text="@string/insert_address"
+                android:textColor="#fff"
+                android:textSize="20dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_button_blue"
+            android:gravity="center"
+            android:onClick="click_back"
+            android:text="@string/back" />
+    </LinearLayout>
+</LinearLayout>

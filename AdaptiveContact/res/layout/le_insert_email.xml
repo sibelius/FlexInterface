@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	
+	    <EditText 
+	        android:id="@+id/email"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:hint="@string/insert_email"
+	        android:inputType="textEmailAddress"
+	        android:maxLines="1"
+	        android:tag="@string/tagEmail"
+	        />
+
+
+	    <ImageButton
+	        android:id="@+id/voice"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="3"
+	        android:background="@drawable/voicerecognition"
+	        android:onClick="click_voice" />
+	</LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/finished"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_green"
+            android:text="@string/finished"
+            android:onClick="click_finished" />
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_blue"
+            android:text="@string/back"
+            android:onClick="click_back" />
+    </LinearLayout>
+
+</LinearLayout>

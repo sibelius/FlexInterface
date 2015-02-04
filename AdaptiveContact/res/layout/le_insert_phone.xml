@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	
+	    <EditText 
+	        android:id="@+id/phone"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:hint="@string/insert_phone"
+	        android:inputType="phone"
+	        android:maxLines="1"
+	        android:tag="@string/tagPhone"
+	        />
+	    
+	    <ImageButton
+	        android:id="@+id/voice"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="3"
+	        android:visibility="gone"
+	        android:background="@drawable/voicerecognition"
+	        android:onClick="click_voice"
+	        android:contentDescription="@string/voice"
+	         />
+	</LinearLayout>
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/finished"
+            style="@style/ButtonText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_green"
+            android:text="@string/finished"
+            android:onClick="click_finished" />
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_blue"
+            android:text="@string/back"
+            android:onClick="click_back" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        >
+	    <TextView 
+	        android:layout_width="0dip"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:text="@string/insert_other_info"
+	        android:textStyle="bold"
+	        android:textSize="20sp"
+	        android:gravity="center"
+			android:clickable="true"
+			android:onClick="click_more_info"        
+	        />
+	    <ImageButton 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/PlusButton"
+	        android:onClick="click_more_info"
+	        android:contentDescription="@string/insert_other_info"
+	        />
+	</LinearLayout>
+</LinearLayout>

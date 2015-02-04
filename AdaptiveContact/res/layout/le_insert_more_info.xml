@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/elderly_photo"
+            android:background="#000"
+            android:padding="10dp"
+            android:onClick="click_photo"
+            android:contentDescription="@string/insert_photo"
+             />
+
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="@string/insert_photo"
+            android:onClick="click_photo"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/elderly_email"
+            android:background="#000"
+            android:padding="10dp"
+            android:onClick="click_email"
+            android:contentDescription="@string/insert_email"
+             />
+
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="@string/insert_email"
+            android:onClick="click_email"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/elderly_address"
+            android:background="#000"
+            android:padding="10dp"
+            android:onClick="click_address"
+            android:contentDescription="@string/insert_address"
+             />
+
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="@string/insert_address"
+            android:onClick="click_address"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+    
+    <Button
+        style="@style/ButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_blue"
+        android:text="@string/back"
+        android:onClick="click_back" 
+        />
+</LinearLayout>

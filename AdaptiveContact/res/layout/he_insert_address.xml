@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        >
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	
+	        <EditText 
+		        android:id="@+id/address"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="2"
+		        android:hint="@string/address"
+		        android:inputType="textPostalAddress"
+		        android:maxLines="1"
+		        android:tag="@string/tagAddress"
+		        />
+	        
+	        <ImageButton
+		        android:id="@+id/voice"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="4"
+		        android:background="@drawable/voicerecognition"
+		        android:onClick="click_voice" />
+	        
+	        <Button
+	            android:id="@+id/next"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="3"
+	            android:text="@string/next"
+	            android:onClick="click_next" />
+	    </LinearLayout>
+	</ScrollView>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    style="@android:style/ButtonBar">
+	    
+	    <Button 
+	        android:id="@+id/save"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/save"
+	        android:onClick="click_save"
+	        />
+	    <Button 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/back"
+	        android:onClick="click_back"
+	        />
+	       
+	</LinearLayout>
+</LinearLayout>

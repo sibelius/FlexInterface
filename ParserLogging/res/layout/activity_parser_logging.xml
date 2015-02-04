@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name" />
+    
+    <Button 
+        android:id="@+id/loadLogging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/app"
+        android:layout_alignParentRight="true"
+        android:text="@string/loadLogging"
+        android:onClick="loadLogging_click"
+        />
+    
+    <TextView 
+        android:id="@+id/timeToCompleteTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/loadLogging"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/timeToCompleteTaskValue"
+        android:text="@string/timeToCompleteTask"
+        />    
+	<TextView 
+	    android:id="@+id/timeToCompleteTaskValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/loadLogging"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+	    />
+	
+	<TextView 
+        android:id="@+id/backspaceCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/timeToCompleteTask"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/backspaceCountValue"
+        android:text="@string/backspaceCount"
+        />    
+	<TextView 
+	    android:id="@+id/backspaceCountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/timeToCompleteTaskValue"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+	    />
+	
+	<TextView
+	    android:id="@+id/backCount"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/backspaceCount"
+	    android:layout_toLeftOf="@+id/timeToCompleteTaskValue"
+	    android:text="@string/backCount" />
+    
+	<TextView 
+	    android:id="@+id/backCountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/backspaceCountValue"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+	    />
+	
+	<TextView 
+        android:id="@+id/keypressed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/backCount"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/keypressedValue"
+        android:text="@string/keypressed"
+        />    
+	<TextView 
+	    android:id="@+id/keypressedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/backCountValue"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+	    />
+	
+	<TextView 
+        android:id="@+id/taskSucessed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/keypressed"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/taskSucessedValue"
+        android:text="@string/taskSucessed"
+        />    
+	<TextView 
+	    android:id="@+id/taskSucessedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/keypressedValue"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+	    />
+	
+</RelativeLayout>

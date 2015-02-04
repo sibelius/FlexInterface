@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_profile"
+        android:textSize="20sp"
+        />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_yellow"
+            android:onClick="click_low_education"
+            android:text="@string/low_education" />
+
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_brown"
+            android:text="@string/high_education"
+            android:onClick="click_high_education"
+            style="@style/ButtonText"
+            />
+    </LinearLayout>
+    <EditText 
+        android:id="@+id/edtElderlyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/elderly_name"
+        />
+</LinearLayout>

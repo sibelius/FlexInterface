@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">ParserLogging</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_parser_logging">ParserLoggingActivity</string>
+    
+    <string name="loadLogging">Carregar Logging</string>
+    
+    <string name="timeToCompleteTask">Tempo para concluir tarefa</string>
+	<string name="backspaceCount">Contador de Backspace</string>
+	<string name="backCount">Contador de Voltar</string>
+	<string name="keypressed">Caracteres digitados</string>
+	<string name="taskSucessed">Tarefa concluida com sucesso</string>
+</resources>

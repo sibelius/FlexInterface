@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	
+	    <EditText 
+	        android:id="@+id/name"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:hint="@string/insert_name"
+	        android:inputType="text"
+	        android:maxLines="1"
+	        android:tag="@string/tagName"
+	        />
+
+	    <ImageButton
+	        android:id="@+id/voice"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="3"
+	        android:background="@drawable/voicerecognition"
+	        android:onClick="click_voice" />
+	</LinearLayout>
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/insert_number"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_green"
+            android:text="@string/insert_number"
+            android:onClick="click_insert_number"
+             />
+    </LinearLayout>
+
+</LinearLayout>

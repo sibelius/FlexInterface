@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_weight="1"
+        android:fillViewport="true"
+    >
+
+        <LinearLayout android:id="@+id/editors"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+        >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+        >
+        	<ImageButton 
+		    	android:src="@drawable/contacts_default_image_add"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:scaleType="fitXY"
+		        android:padding="10dp"
+		        android:background="#000"
+		        />
+        	
+        	<LinearLayout 
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:orientation="vertical"
+        		android:layout_weight="3"   
+        	>
+		        <EditText
+		            android:id="@+id/txtFirstName"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:hint="Primeiro nome"
+		            android:maxLines="1"
+		            android:inputType="textCapWords"
+		            />
+		        <RelativeLayout
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content"
+		        	
+		        	>		        
+		        	<Button
+				        android:id="@+id/edit_label"
+				        android:layout_width="100dip"
+				        android:layout_height="wrap_content"
+				        android:visibility="gone"
+				        android:gravity="left|center_vertical"
+				        />
+				
+				    <ImageButton
+				        android:id="@+id/edit_delete"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentRight="true"
+				        android:visibility="invisible"
+				        style="@style/MinusButton" />
+				
+				    <LinearLayout
+				        android:id="@+id/edit_fields"
+				        android:layout_width="0dip"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="4dip"
+				        android:layout_alignWithParentIfMissing="true"
+				        android:layout_toRightOf="@id/edit_label"
+				        android:layout_toLeftOf="@id/edit_delete"
+				        android:orientation="vertical"
+				        android:baselineAligned="false"
+				        android:gravity="center_vertical"
+				        >
+				        
+				        <EditText 
+				            android:id="@+id/txtLastName"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:hint="Sobrenome"
+				            android:maxLines="1"
+				            android:inputType="textCapWords"
+				            />
+				        
+				    </LinearLayout>
+				
+				    <ImageButton
+				        android:id="@+id/edit_more"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentRight="true"
+				        android:layout_alignBottom="@id/edit_fields"
+				        style="@style/MoreButton" />
+				
+				    <ImageButton
+				        android:id="@+id/edit_less"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentRight="true"
+				        android:layout_alignBottom="@id/edit_fields"
+				        android:visibility="gone"
+				        style="@style/LessButton" />
+		        </RelativeLayout>
+	       	</LinearLayout>
+        </LinearLayout>
+        
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:text="Celular" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        style="@style/MinusButton"
+		         />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >
+		        <EditText
+		            android:id="@+id/txtNumberPhone" 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:hint="Nº de telefone"
+		            android:maxLines="1"
+		            android:inputType="phone"
+		            />		        
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/MoreButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+        
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:visibility="gone" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        style="@style/PlusButton" />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >		        
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Adicionar número de telefone"
+		            />
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/MoreButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+		
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:text="Casa" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        style="@style/MinusButton" />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >
+		        <EditText 
+		            android:id="@+id/txtEmailAddress"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:hint="Endereço de e-mail"
+		            android:maxLines="1"
+		            />		        
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/MoreButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+		
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:visibility="gone" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        style="@style/PlusButton" />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Adicionar endereço de e-mail"
+		            />
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/MoreButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:text="Google Talk"/>
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        style="@style/MinusButton" />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >
+		        <EditText 
+		            android:id="@+id/txtMsgInstant"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:hint="Mensagem instantânia"
+		            android:maxLines="1"
+		            android:inputType="text"
+		            />		        
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/MoreButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+		
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:visibility="gone"/>
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        style="@style/PlusButton" />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Adicionar IM"
+		            />
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/MoreButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+            
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:visibility="gone"
+		        />
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:visibility="gone"
+		        style="@style/MinusButton" />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Grupos"
+		            />
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Não atribuido"
+		            />
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        style="@style/MoreNormalButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+		
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:visibility="gone"
+		        />
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:visibility="gone"
+		        style="@style/MinusButton" />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Toque"
+		            />
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Toque padrão"
+		            />
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        style="@style/MoreNormalButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+            
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:visibility="gone"
+		        />
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:visibility="gone"
+		        style="@style/MinusButton" />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Empresa"
+		            />
+		        <EditText
+		            android:id="@+id/txtBusiness"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:hint="Empresa"
+		            android:maxLines="1"
+		            android:inputType="text"
+		            />
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/MoreButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+		
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:visibility="gone"
+		        />
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:visibility="gone"
+		        style="@style/MinusButton" />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Título do trabalho"
+		            />
+		        <EditText
+		            android:id="@+id/txtJobTitle"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:hint="Título do trabalho"
+		            android:maxLines="1"
+		            android:inputType="text"
+		            />
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/MoreButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+		
+        <RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    <Button
+		        android:id="@+id/edit_label"
+		        android:layout_width="100dip"
+		        android:layout_height="wrap_content"       
+		        android:gravity="left|center_vertical"
+		        android:visibility="gone" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        style="@style/PlusButton" />
+		
+		    <LinearLayout
+		        android:id="@+id/edit_fields"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="4dip"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:layout_toRightOf="@id/edit_label"
+		        android:layout_toLeftOf="@id/edit_delete"
+		        android:orientation="vertical"
+		        android:baselineAligned="false"
+		        android:gravity="center_vertical"
+		    >		        
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Adicionar mais campos"
+		            />
+		    </LinearLayout>
+		
+		    <ImageButton
+		        android:id="@+id/edit_more"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/MoreButton" />
+		
+		    <ImageButton
+		        android:id="@+id/edit_less"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@id/edit_fields"
+		        android:visibility="gone"
+		        style="@style/LessButton" />
+		    
+		</RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="@android:style/ButtonBar"
+    >
+
+        <Button android:id="@+id/btn_done"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Salvar"
+            android:onClick="click_save"
+        />
+
+        <Button android:id="@+id/btn_discard"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancelar"
+            android:onClick="click_cancelar"
+        />
+
+    </LinearLayout>
+</LinearLayout>
